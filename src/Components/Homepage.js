@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Lead = styled.h1`
   color: black;
@@ -24,7 +25,6 @@ const RegistrationButton = styled.button`
   height: 60px;
   font-size: 20px;
   margin-left: 320px;
-  
 `;
 
 const LoginButton = styled.button`
@@ -43,7 +43,11 @@ function Homepage() {
       <div className="bg"></div>
       <Lead className="greeting">Welcome!</Lead>
       <ButtonDiv>
-        <RegistrationButton className="Register">Register</RegistrationButton>
+        
+          <RegistrationButton className="Register">
+          <Link to="/register">
+            Register</Link>
+          </RegistrationButton>
         <LoginButton className="login">Log in</LoginButton>
       </ButtonDiv>
     </div>
